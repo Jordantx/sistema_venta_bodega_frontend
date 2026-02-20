@@ -1,0 +1,26 @@
+.espaciador {
+  flex: 1 1 auto;
+}
+
+.contenido {
+  padding: 20px;
+  text-align: center;
+}
+
+.cuadros-acceso {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-menu {
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.tarjeta-menu:hover {
+  transform: scale(1.05); /* Efecto de rebote al pasar el mouse */
+  cursor: pointer;
+}

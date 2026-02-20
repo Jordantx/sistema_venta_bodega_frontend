@@ -1,0 +1,42 @@
+<div class="overlay-fondo">
+  <div class="ventana-registro">
+
+        <div class="contenedor-principal">
+        <div class="tarjeta-registro animate__animated animate__fadeIn">
+            <img src="img/logo.png" alt="logo" width="120px" class="logo-bodega">
+            
+            <h2>Registro de Nuevo Cliente</h2>
+            <p class="subtitulo">Complete los datos para ventas con boleta/factura</p>
+
+            <div class="formulario">
+            <mat-form-field appearance="outline" class="ancho-completo">
+                <mat-label>DNI / RUC</mat-label>
+                <input matInput placeholder="Ej. 70654321">
+                <mat-icon matSuffix>badge</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="ancho-completo">
+                <mat-label>Nombres y Apellidos</mat-label>
+                <input matInput placeholder="Nombre del cliente o Razón Social">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="ancho-completo">
+                <mat-label>Teléfono / Celular</mat-label>
+                <input matInput type="tel" placeholder="987 654 321">
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+            </div>
+
+            <div class="contenedor-botones">
+            <button mat-raised-button color="primary" class="btn-guardar">
+                <mat-icon>save</mat-icon> Guardar Cliente
+            </button>
+            <button mat-button color="warn" routerLink="/inicio">
+                Cancelar
+            </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

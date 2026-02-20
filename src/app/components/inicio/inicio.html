@@ -1,0 +1,49 @@
+<div class="contenedor-inicio">
+  <mat-toolbar color="primary" class="barra-superior">
+    <span>Bodega El Peregrino - Panel de Control</span>
+    <span class="espaciador"></span>
+    <button mat-icon-button [routerLink]="['/login']">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="contenido">
+    <h2>Bienvenido, [Nombre del Vendedor]</h2>
+    
+    <div class="cuadros-acceso">
+      <mat-card class="tarjeta-menu">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>shopping_cart</mat-icon>
+          <mat-card-title>Nueva Venta </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button color="accent">IR A VENDER</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="tarjeta-menu">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>inventory_2</mat-icon>
+          <mat-card-title>Inventario</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button color="accent">VER STOCK</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="tarjeta-menu">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>Registrar Cliente </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button color="accent" routerLink="/registro-clientes">IR A VENDER</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+    </div>
+  </div>
+
+  
+</div>
