@@ -1,15 +1,24 @@
 <div class="diseño_centrar">
-  <mat-form-field appearance="outline" class="w-100 mb-3">
+  
+        
+        <img src="img/logo.png" alt="logo" width="150px">
+        
+    <mat-form-field appearance="outline" class="ancho-completo">
     <mat-label>Usuario</mat-label>
     <input matInput placeholder="Admin">
     <mat-icon matSuffix>person</mat-icon>
   </mat-form-field>
 
-  <input matInput [type]="hide ? 'password' : 'text'" placeholder="********">
+  <mat-form-field appearance="outline" class="ancho-completo">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" placeholder="********">
+    <mat-icon matSuffix>lock</mat-icon>
+  </mat-form-field>
+  
 
-<button mat-icon-button matSuffix (click)="hide = !hide" type="button">
-  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-</button>
-
-  <button mat-raised-button color="primary" class="w-100">Ingresar</button>
+  <div class="contenedor-botones">
+    <button mat-button color="accent">Registrar</button>
+    <button mat-raised-button color="primary">Ingresar</button>
+    
+  </div>
 </div>

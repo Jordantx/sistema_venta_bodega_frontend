@@ -1,9 +1,29 @@
 .diseño_centrar {
     display: flex;
-    flex-direction: column; /* Pone un campo debajo del otro */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Ocupa toda la pantalla */
-    max-width: 400px;
-    margin: 0 auto; /* Centra el cuadro */
+    justify-content: center;
+    height: 80vh; /* Para que no esté pegado al techo */
+    padding: 20px;
 }
+
+.ancho-completo {
+    width: 100%;
+    max-width: 350px; /* Para que no se estire demasiado */
+    margin-bottom: 15px;
+}
+
+.titulo-bodega {
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #3f51b5; /* Color azul de Material */
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+}
+
