@@ -1,0 +1,9 @@
+.diseño_centrar {
+    display: flex;
+    flex-direction: column; /* Pone un campo debajo del otro */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    max-width: 400px;
+    margin: 0 auto; /* Centra el cuadro */
+}

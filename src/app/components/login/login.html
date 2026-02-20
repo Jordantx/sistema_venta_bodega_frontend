@@ -1,0 +1,15 @@
+<div class="diseño_centrar">
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Usuario</mat-label>
+    <input matInput placeholder="Admin">
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+
+  <input matInput [type]="hide ? 'password' : 'text'" placeholder="********">
+
+<button mat-icon-button matSuffix (click)="hide = !hide" type="button">
+  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+</button>
+
+  <button mat-raised-button color="primary" class="w-100">Ingresar</button>
+</div>
