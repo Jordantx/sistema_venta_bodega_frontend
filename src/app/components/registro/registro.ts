@@ -4,21 +4,23 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; //ruta (URL) Buton de Regist
-
+import { RouterModule } from '@angular/router'; //ruta (URL)
+import { MatSelectModule } from '@angular/material/select'; // <--- El motor del selector
 @Component({
-  selector: 'app-login',
+  selector: 'app-registro',
   imports: [
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     CommonModule, 
-    RouterModule,
+     RouterModule,
     MatButtonModule,
+    MatSelectModule
+
   ],
-  templateUrl: './login.html',
-  styleUrl: './login.css',
+  templateUrl: './registro.html',
+  styleUrl: './registro.css',
 })
-export class Login {
-  hide = true;
+export class Registro {
+
 }
