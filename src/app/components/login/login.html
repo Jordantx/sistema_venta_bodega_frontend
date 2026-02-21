@@ -1,24 +1,21 @@
 <div class="diseño_centrar">
-  
-        
-        <img src="img/logo.png" alt="logo" width="150px">
-        
-    <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Usuario</mat-label>
-    <input matInput placeholder="Admin">
-    <mat-icon matSuffix>person</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Contraseña</mat-label>
-    <input matInput type="password" placeholder="********">
-    <mat-icon matSuffix>lock</mat-icon>
-  </mat-form-field>
-  
-
-  <div class="contenedor-botones">
-    <button mat-button color="accent" routerLink="/registro">Registrar</button>
-    <button mat-raised-button color="primary" routerLink="/inicio">Ingresar</button>
     
-  </div>
+    <img src="img/logo.png" alt="logo" width="150px">
+    
+    <mat-form-field appearance="outline" class="ancho-completo">
+        <mat-label>Usuario</mat-label>
+        <input matInput [(ngModel)]="loginData.usuario" name="usuario" placeholder="Admin">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="ancho-completo">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" [(ngModel)]="loginData.contrasena" name="contrasena" placeholder="********">
+        <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
+
+    <div class="contenedor-botones">
+        <button mat-button color="accent" routerLink="/registro">Registrar</button>
+        <button mat-raised-button color="primary" (click)="validarLogin()">Ingresar</button>
+    </div>
 </div>

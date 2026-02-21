@@ -27,3 +27,16 @@
     justify-content: center;
 }
 
+
+/* Estilos para los mensajes de validación */
+.snackbar-exito {
+  background-color: #4caf50 !important; /* Verde éxito */
+  color: white !important;
+  font-weight: bold;
+}
+
+.snackbar-error {
+  background-color: #f44336 !important; /* Rojo error */
+  color: white !important;
+}
+

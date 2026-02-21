@@ -5,38 +5,37 @@
     <h2 style="margin: 20px 0;">Registro de Nuevo Personal</h2>
 
     <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Nombre</mat-label>
-    <input matInput placeholder="Ej. Juan ">
-    <mat-icon matSuffix>badge</mat-icon>
-
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="usuario.nombre" name="nombre" placeholder="Ej. Juan">
+      <mat-icon matSuffix>badge</mat-icon>
     </mat-form-field>
+
     <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Apellido</mat-label>
-    <input matInput placeholder="Ej. Perez ">
-    <mat-icon matSuffix>badge</mat-icon>
+      <mat-label>Apellido</mat-label>
+      <input matInput [(ngModel)]="usuario.apellido" name="apellido" placeholder="Ej. Perez">
+      <mat-icon matSuffix>badge</mat-icon>
     </mat-form-field>
 
+    <mat-form-field appearance="outline" class="ancho-completo">
+      <mat-label>DNI</mat-label>
+      <input matInput [(ngModel)]="usuario.dni" name="dni" placeholder="8 dígitos">
+      <mat-icon matSuffix>fingerprint</mat-icon>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>DNI</mat-label>
-    <input matInput placeholder="8 dígitos">
-    <mat-icon matSuffix>fingerprint</mat-icon>
-  </mat-form-field>
+    <mat-form-field appearance="outline" class="ancho-completo">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="usuario.usuario" name="usuario" placeholder="Crea un usuario">
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Usuario</mat-label>
-    <input matInput placeholder="Crea un usuario">
-    <mat-icon matSuffix>person</mat-icon>
-  </mat-form-field>
+    <mat-form-field appearance="outline" class="ancho-completo">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" [(ngModel)]="usuario.contrasena" name="contrasena" placeholder="********">
+      <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline" class="ancho-completo">
-    <mat-label>Contraseña</mat-label>
-    <input matInput type="password" placeholder="********">
-    <mat-icon matSuffix>lock</mat-icon>
-  </mat-form-field>
-
-    <div class="contenedor-botones" >
-      <button mat-raised-button color="primary">Guardar Registro</button>
+    <div class="contenedor-botones">
+      <button mat-raised-button color="primary" (click)="guardar()">Guardar Registro</button>
       <button mat-button color="warn" routerLink="/login">Cancelar</button>
     </div>
 
