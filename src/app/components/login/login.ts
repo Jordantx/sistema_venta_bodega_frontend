@@ -5,10 +5,9 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; //ruta (URL) Buton de Regist
-
+import { Empleado } from '../../services/empleado'; // Tu servicio conectado al puerto 2025
 import { FormsModule } from '@angular/forms'; // Para capturar loginData
 import { Router } from '@angular/router'; // Para el this.router.navigate
-import { Usuario } from '../../services/usuario'; // Tu servicio conectado al puerto 2025
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -37,13 +36,28 @@ export class Login {
 
   // Inyectamos las dependencias en el constructor
   constructor(
-    private usuarioService: Usuario, 
+    private empleadoService: Empleado, 
     private router: Router,
     private _snackBar: MatSnackBar
   ) {}
 
+  
   //mensafe con estilo 
  validarLogin() {
+  
+  this.empleadoService.login(this.loginData).subscribe({
+    next: (user: any) => { 
+      // 'user' es la entidad que viene de Spring Boot
+      // La guardamos en el navegador
+      localStorage.setItem('usuarioLogueado', JSON.stringify(user)); 
+      this.router.navigate(['/inicio']);
+    },
+    error: (err: any) => {
+      alert('Error en los datos');
+    }
+  });
+
+  
     // 1. Verificamos que los campos no estén vacíos antes de molestar al servidor
     if (!this.loginData.usuario || !this.loginData.contrasena) {
       this._snackBar.open('⚠️ DEBE INGRESAR USUARIO Y CONTRASEÑA', 'Cerrar', {
@@ -54,7 +68,7 @@ export class Login {
     }
 
     // 2. Intentamos conectar con el backend (Spring Boot)
-    this.usuarioService.login(this.loginData).subscribe({
+    this.empleadoService.login(this.loginData).subscribe({
       next: (user: any) => {
         // Solo si los datos coinciden en la base de datos:
         this._snackBar.open('✅ ¡CORRECTO! BIENVENIDO AL SISTEMA', 'Cerrar', {

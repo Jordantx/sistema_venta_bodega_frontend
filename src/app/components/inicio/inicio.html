@@ -1,6 +1,7 @@
 <div class="contenedor-inicio">
   <mat-toolbar color="primary" class="barra-superior">
-    <span>Bodega El Peregrino - Panel de Control</span>
+    <img src="img/logo.png" alt="logo" width="100px" > 
+    <span>Bodega El Peregrino - Panel de Control </span> 
     <span class="espaciador"></span>
     <button mat-icon-button [routerLink]="['/login']">
       <mat-icon>logout</mat-icon>
@@ -8,7 +9,7 @@
   </mat-toolbar>
 
   <div class="contenido">
-    <h2>Bienvenido, [Nombre del Vendedor]</h2>
+    <h2>Bienvenido, {{empleado.nombres}} </h2>
     
     <div class="cuadros-acceso">
       <mat-card class="tarjeta-menu">

@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; //ruta (URL)
 import { MatSelectModule } from '@angular/material/select'; // <--- El motor del selector
-import { Usuario } from '../../services/usuario'; // Tu servicio
+import { Empleado } from '../../services/empleado'; 
 import { FormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -32,23 +32,23 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class Registro {
   // Objeto que coincide con tu entidad Java
-  usuario = {
+  empleado = {
     dni: '',
-    nombre: '',
-    apellido: '',
+    nombres: '',
+    apellidos: '',
     usuario: '',
     contrasena: '',
     rol: 'VENDEDOR', // Valor por defecto
     estado: 'ACTIVO'
   };
-  constructor(private usuarioService: Usuario,
+  constructor(private empleadoService: Empleado,
     private _snackBar: MatSnackBar
   ) {}
 
 
 
   guardar() {
-  this.usuarioService.registrar(this.usuario).subscribe({
+  this.empleadoService.registrar(this.empleado).subscribe({
     next: (res) => {
       // 🌟 DISEÑO DE ÉXITO EN MAYÚSCULAS
       this._snackBar.open('✅ ¡PERSONAL REGISTRADO CON ÉXITO!', 'Cerrar', {
